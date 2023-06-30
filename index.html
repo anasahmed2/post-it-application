@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Post it ✅ </title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="images/chat-logo.png" type="images/png">
+</head>
+
+
+<body>
+
+  <!-- modaal -->
+
+  <div class="modal-main" id="modalDseign">
+    <div class="modal-design">
+      <!-- head -->
+      <div class="modal-h">
+        <div class="modal-heading">
+          <h5>Create Post</h5>
+        </div>
+        <div class="modal-h-cut"><button class="modal-h-cut-btn" onclick="modalCut()"><i class="fa-solid fa-xmark">
+            </i></button></div>
+      </div>
+      <hr style="margin:.5rem 0;"style="margin:.5rem 0;">
+      <!-- profile-->
+      <div class="modal-profile-design">
+        <div class="modal-profile-img"><img src="images/my-profile.jpg" alt="" width="100%"></div>
+        <div class="modal-profile-name">
+          <p>Burak</p>
+        </div>
+      </div>
+      <hr style="margin:.5rem 0;">
+      <!-- textarea -->
+      <div class="modal-text-area">
+        <textarea name="" id="textarea" class="textarea-design" placeholder="What's on your mind?"></textarea>
+        <div class="modal-btn">
+          <div class="main-btn"><button class="some-btn" id="modalColorThemeBtn"></button></div>
+          <div class="all-btn" id="allBtnTheme">
+            <button class="all-btns-0" onclick="colorBtn0()"> <img src="images/color.jpg" alt="" width="32px"></button>
+            <button class="some-btn all-btns-1" onclick="colorBtn1()"></button>
+            <button class="some-btn all-btns-2" onclick="colorBtn2()"></button>
+            <button class="some-btn all-btns-3" onclick="colorBtn3()"></button>
+            <button class="some-btn all-btns-4" onclick="colorBtn4()"></button>
+            <button class="some-btn all-btns-5" onclick="colorBtn5()"></button>
+            <button class="some-btn all-btns-6" onclick="colorBtn6()"></button>
+            <button class="some-btn all-btns-7" onclick="colorBtn7()"></button>
+            <button class="some-btn all-btns-8" onclick="colorBtn8()"></button>
+            <button class="some-btn all-btns-9" onclick="colorBtn9()"></button>
+            <button class="some-btn all-btns-10" onclick="colorBtn10()"></button>
+
+          </div>
+        </div>
+        <div class="modal-file"><input type="file" id="file"></div>
+
+      </div>
+      <hr style="margin:.5rem 0;">
+      <div class="post-btn"> <button id="postBtn">Post</button></div>
+
+
+    </div>
+  </div>
+  <!-- navbar -->
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary navs-width">
+    <div class="container">
+      <div class="logos">
+        <a class="navbar-brand" href="#"><img src="images/logo.png" alt="" width="80px">
+        </a>
+      </div>
+
+      <div class="inputss-wrapper ">
+        <div class="inputs-style">
+          <input type="text" name="text" class="input">
+          <i class="fa-solid fa-magnifying-glass iconss"></i>
+        </div>
+      </div>
+      <div class="btns">
+        <div class="icons"><i class="fa-solid fa-circle-user"></i></div>
+        <div class="icons"><i class="fa-solid fa-message"></i></div>
+        <div class="icons"><i class="fa-solid fa-bell"></i></div>
+      </div>
+    </div>
+    </div>
+  </nav>
+
+  <!-- post area container -->
+  <div class="main-container-boxs">
+    <!-- side border -->
+    <div class="side-bar">
+      <ul class="side-ul">
+        <li class="act"><a href="#"><i class="fa-solid fa-house"></i></a></li>
+        <li><a href="#"><i class="fa-solid fa-comments"></i></i></a></li>
+        <li><a href="#"><i class="fa-brands fa-amazon"></i></a></li>
+        <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+        <li><a href="#"><i class="fa-solid fa-download"></i></a></li>
+        <li><a href="#"><i class="fa-solid fa-folder"></i></a></li>
+        <li><a href="#"><i class="fa-solid fa-play"></i></a></li>
+        <li><a href="#"><i class="fa-solid fa-cake-candles"></i></a></li>
+        <li><a href="#"><i class="fa-solid fa-cube"></i></a></li>
+      </ul>
+    </div>
+    <!-- post area -->
+    <div class="post-boxs">
+      <div class="posties">
+
+        <!-- post box -->
+        <div class="chat-post">
+
+
+          <!-- create -->
+          <div class="creates">
+            <h5>Create Post</h5>
+
+            <div class="create-input" onclick="inputOpen()">
+              <div class="profile"><img src="images/my-profile.jpg" alt="" width="90%"></div>
+              <input type="text" placeholder="What's on your mind?" disabled>
+            </div>
+            <hr>
+            <div class="create-btn">
+              <button class="btns-1"><img src="images/photo.png" alt="" width="14%"> photos/video</button>
+              <button class="btns-2"><img src="images/tag.png" alt="" width="14%"> Tag Friends</button>
+              <button class="btns-3"><img src="images/photos-s.png" alt="" width="14%">Feeling/Activety</button>
+              <button class="btns-4"><i class="fa-solid fa-ellipsis"></i></button>
+            </div>
+          </div>
+
+          <div class="add" id="postAdd">
+            <!-- post 1 -->
+            <div class="post" id="posted">
+              <div class="post-head">
+                <div class="post-profile-head">
+                  <div class="post-profile-img">
+                    <img src="images/girl.png" alt="" width="100%">
+                  </div>
+                  <div class="post-profile-main-p">
+                    <p class="post-profile-p">ecrin su çoban </p>
+                    <p class="post-profile-p-n"> 5 min ago</p>
+                  </div>
+                </div>
+                <div class="post-profile-dot"><button><i class="fa-solid fa-trash"></i></button></div>
+              </div>
+              <!-- textarea -->
+              <div class="textarea">
+                <p>❤️❤️</p>
+              </div>
+              <!-- photo -->
+              <div class="image-post">
+                <img src="images/happines-post.png" alt="" width='100%'>
+              </div>
+              <!-- like-->
+              <hr>
+              <div class="like">
+                <div class="likes">
+                  <div class="like-p"><a href="javascript:void(0)"><i class="fa-solid fa-thumbs-up"></i>1 Likes</a>
+                  </div>
+                  <div class="like-p"><a href="javascript:void(0)"><i class="fa-solid fa-comment"></i>2 Comment</a>
+                  </div>
+                </div>
+                <div class="shares"><a href="javascript:void(0)"><i class="fa-solid fa-share"></i> Share</a></div>
+              </div>
+              <hr>
+
+              <!-- comment 1 -->
+              <div class="comment">
+                <div class="comment-img">
+                  <img src="images/car.jpg" alt="" width="100%">
+                </div>
+                <div class="comment-comment">
+                  <p class="comment-p">Eymen</p>
+                  <p class="comment-pp">Ture❤️</p>
+                  <div class="comment-p-p">
+                    <p><a href="javascript:void(0)">Like</a></p>
+                    <p><a href="javascript:void(0)">Replay</a></p>
+                    <p><a href="javascript:void(0)">Translate</a></p>
+                    <p class="comment-p-t">Just Now</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- comment 2 -->
+              <div class="comment">
+                <div class="comment-img">
+                  <img src="images/zehra.jpeg" alt="" width="100%">
+                </div>
+                <div class="comment-comment">
+                  <p class="comment-p">Zehar</p>
+                  <p class="comment-pp">Yup😍</p>
+                  <div class="comment-p-p">
+                    <p><a href="javascript:void(0)">Like</a></p>
+                    <p><a href="javascript:void(0)">Replay</a></p>
+                    <p><a href="javascript:void(0)">Translate</a></p>
+                    <p class="comment-p-t">Just Now</p>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="user-comment">
+                <div class="user-input"><input type="text">
+                </div>
+                <div class="user-comment-btn">
+                  <button><i class="fa-solid fa-paper-plane"></i></button>
+                  <button><i class="fa-solid fa-paperclip"></i></button>
+                  <button><i class="fa-solid fa-face-smile"></i></button>
+                  <button><i class="fa-solid fa-camera"></i></button>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- post 2 -->
+            <div class="post" id="posted">
+              <div class="post-head">
+                <div class="post-profile-head">
+                  <div class="post-profile-img">
+                    <img src="images/boy-ast.png" alt="" width="100%">
+                  </div>
+                  <div class="post-profile-main-p">
+                    <p class="post-profile-p">ömer asaf</p>
+                    <p class="post-profile-p-n"> 1h ago</p>
+                  </div>
+                </div>
+                <div class="post-profile-dot"><button><i class="fa-solid fa-trash"></i></button></div>
+              </div>
+              <!-- textarea -->
+              <div class="textarea">
+                <p>Having the dream is easy, making it come true is hard 💯🔥</p>
+              </div>
+              <!-- photo -->
+              <div class="image-post">
+                <img src="images/boy-in-car.png" alt="" width='100%'>
+              </div>
+              <!-- like-->
+              <hr>
+              <div class="like">
+                <div class="likes">
+                  <div class="like-p"><a href="javascript:void(0)"><i class="fa-solid fa-thumbs-up"></i>8 Likes</a>
+                  </div>
+                  <div class="like-p"><a href="javascript:void(0)"><i class="fa-solid fa-comment"></i>2 Comment</a>
+                  </div>
+                </div>
+                <div class="shares"><a href="javascript:void(0)"><i class="fa-solid fa-share"></i> Share</a></div>
+              </div>
+              <hr>
+
+              <!-- comment 1 -->
+              <div class="comment">
+                <div class="comment-img">
+                  <img src="images/stroy-sea.png.jpg" alt="" width="100%">
+                </div>
+                <div class="comment-comment">
+                  <p class="comment-p">Mehmet</p>
+                  <p class="comment-pp">Nice Bro 👍</p>
+                  <div class="comment-p-p">
+                    <p><a href="javascript:void(0)">Like</a></p>
+                    <p><a href="javascript:void(0)">Replay</a></p>
+                    <p><a href="javascript:void(0)">Translate</a></p>
+                    <p class="comment-p-t">20 min</p>
+                  </div>
+                </div>
+
+              </div>
+
+
+              <!-- comment 1 -->
+              <div class="comment">
+                <div class="comment-img">
+                  <img src="images/cartoon.png" alt="" width="100%">
+                </div>
+                <div class="comment-comment">
+                  <p class="comment-p">miraç</p>
+                  <p class="comment-pp">Handsome ♥️♥️</p>
+                  <div class="comment-p-p">
+                    <p><a href="javascript:void(0)">Like</a></p>
+                    <p><a href="javascript:void(0)">Replay</a></p>
+                    <p><a href="javascript:void(0)">Translate</a></p>
+                    <p class="comment-p-t">1h</p>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="user-comment">
+                <div class="user-input"><input type="text">
+                </div>
+                <div class="user-comment-btn">
+                  <button><i class="fa-solid fa-paper-plane"></i></button>
+                  <button><i class="fa-solid fa-paperclip"></i></button>
+                  <button><i class="fa-solid fa-face-smile"></i></button>
+                  <button><i class="fa-solid fa-camera"></i></button>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- post 3 -->
+            <div class="post" id="posted">
+              <div class="post-head">
+                <div class="post-profile-head">
+                  <div class="post-profile-img">
+                    <img src="images/cartoon-girl.png" alt="" width="100%">
+                  </div>
+                  <div class="post-profile-main-p">
+                    <p class="post-profile-p">Zeynep</p>
+                    <p class="post-profile-p-n"> 2 day ago</p>
+                  </div>
+                </div>
+                <div class="post-profile-dot"><button><i class="fa-solid fa-trash"></i></button></div>
+              </div>
+              <!-- textarea -->
+              <div class="textarea">
+                <p> it is often the small steps, not the gaint leap, that bring about the most lasting
+                  change.❤️❤️❤️❤️❤️❤️<br> <b>(HRM QUEEN ELIZABETH II)</b></p>
+              </div>
+              <!-- photo -->
+              <div class="image-post">
+                <img src="images/" alt="" width='100%'>
+              </div>
+              <!-- like-->
+              <hr>
+              <div class="like">
+                <div class="likes">
+                  <div class="like-p"><a href="javascript:void(0)"><i class="fa-solid fa-thumbs-up"></i>1 Likes</a>
+                  </div>
+                  <div class="like-p"><a href="javascript:void(0)"><i class="fa-solid fa-comment"></i>2 Comment</a>
+                  </div>
+                </div>
+                <div class="shares"><a href="javascript:void(0)"><i class="fa-solid fa-share"></i> Share</a></div>
+              </div>
+              <hr>
+
+              <!-- comment 1 -->
+              <div class="comment">
+                <div class="comment-img">
+                  <img src="images/albale.jpg" alt="" width="100%">
+                </div>
+                <div class="comment-comment">
+                  <p class="comment-p">Albela</p>
+                  <p class="comment-pp">💯🔥👍</p>
+                  <div class="comment-p-p">
+                    <p><a href="javascript:void(0)">Like</a></p>
+                    <p><a href="javascript:void(0)">Replay</a></p>
+                    <p><a href="javascript:void(0)">Translate</a></p>
+                    <p class="comment-p-t">23h ago</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- comment 1 -->
+              <div class="comment">
+                <div class="comment-img">
+                  <img src="images/hiranur.jpeg" alt="" width="100%">
+                </div>
+                <div class="comment-comment">
+                  <p class="comment-p">Hiranur</p>
+                  <p class="comment-pp">Damn Ture❤️</p>
+                  <div class="comment-p-p">
+                    <p><a href="javascript:void(0)">Like</a></p>
+                    <p><a href="javascript:void(0)">Replay</a></p>
+                    <p><a href="javascript:void(0)">Translate</a></p>
+                    <p class="comment-p-t">1 Day ago</p>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="user-comment">
+                <div class="user-input"><input type="text">
+                </div>
+                <div class="user-comment-btn">
+                  <button><i class="fa-solid fa-paper-plane"></i></button>
+                  <button><i class="fa-solid fa-paperclip"></i></button>
+                  <button><i class="fa-solid fa-face-smile"></i></button>
+                  <button><i class="fa-solid fa-camera"></i></button>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- post 4 -->
+            <div class="post" id="posted">
+              <div class="post-head">
+                <div class="post-profile-head">
+                  <div class="post-profile-img">
+                    <img src="images/hiranur.jpeg" alt="" width="100%">
+                  </div>
+                  <div class="post-profile-main-p">
+                    <p class="post-profile-p">Hiranur</p>
+                    <p class="post-profile-p-n"> 5 day ago</p>
+                  </div>
+                </div>
+                <div class="post-profile-dot"><button><i class="fa-solid fa-trash"></i></button></div>
+              </div>
+              <!-- textarea -->
+              <div class="textarea">
+                <p> Impossible is just an opinion😎🔥</p>
+              </div>
+              <!-- photo -->
+              <div class="image-post">
+                <img src="images/aesthetic.png" alt="" width='100%'>
+              </div>
+              <!-- like-->
+              <hr>
+              <div class="like">
+                <div class="likes">
+                  <div class="like-p"><a href="javascript:void(0)"><i class="fa-solid fa-thumbs-up"></i>1 Likes</a>
+                  </div>
+                  <div class="like-p"><a href="javascript:void(0)"><i class="fa-solid fa-comment"></i>2 Comment</a>
+                  </div>
+                </div>
+                <div class="shares"><a href="javascript:void(0)"><i class="fa-solid fa-share"></i> Share</a></div>
+              </div>
+              <hr>
+
+              <!-- comment 1 -->
+              <div class="comment">
+                <div class="comment-img">
+                  <img src="images/zehra.jpeg" alt="" width="100%">
+                </div>
+                <div class="comment-comment">
+                  <p class="comment-p">Zehar</p>
+                  <p class="comment-pp">lookine gorgeous 🙊😍</p>
+                  <div class="comment-p-p">
+                    <p><a href="javascript:void(0)">Like</a></p>
+                    <p><a href="javascript:void(0)">Replay</a></p>
+                    <p><a href="javascript:void(0)">Translate</a></p>
+                    <p class="comment-p-t">4 day ago</p>
+                  </div>
+                </div>
+              </div>
+              <!-- comment 1 -->
+              <div class="comment">
+                <div class="comment-img">
+                  <img src="images/boy-ast.png" alt="" width="100%">
+                </div>
+                <div class="comment-comment">
+                  <p class="comment-p">ömer asaf</p>
+                  <p class="comment-pp">pretty ❤️❤️❤️</p>
+                  <div class="comment-p-p">
+                    <p><a href="javascript:void(0)">Like</a></p>
+                    <p><a href="javascript:void(0)">Replay</a></p>
+                    <p><a href="javascript:void(0)">Translate</a></p>
+                    <p class="comment-p-t">4 day ago</p>
+                  </div>
+                </div>
+
+              </div>
+
+
+              <!-- comment 1 -->
+              <div class="comment">
+                <div class="comment-img">
+                  <img src="images/girl.png" alt="" width="100%">
+                </div>
+                <div class="comment-comment">
+                  <p class="comment-p">ecrin su çoban</p>
+                  <p class="comment-pp">Nice baby ❤️</p>
+                  <div class="comment-p-p">
+                    <p><a href="javascript:void(0)">Like</a></p>
+                    <p><a href="javascript:void(0)">Replay</a></p>
+                    <p><a href="javascript:void(0)">Translate</a></p>
+                    <p class="comment-p-t">5 day ago</p>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="user-comment">
+                <div class="user-input"><input type="text">
+                </div>
+                <div class="user-comment-btn">
+                  <button><i class="fa-solid fa-paper-plane"></i></button>
+                  <button><i class="fa-solid fa-paperclip"></i></button>
+                  <button><i class="fa-solid fa-face-smile"></i></button>
+                  <button><i class="fa-solid fa-camera"></i></button>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- post 5 -->
+            <div class="post" id="posted">
+              <div class="post-head">
+                <div class="post-profile-head">
+                  <div class="post-profile-img">
+                    <img src="images/albale.jpg" alt="" width="100%">
+                  </div>
+                  <div class="post-profile-main-p">
+                    <p class="post-profile-p">Albela</p>
+                    <p class="post-profile-p-n"> 1 week ago</p>
+                  </div>
+                </div>
+                <div class="post-profile-dot"><button><i class="fa-solid fa-trash"></i></button></div>
+              </div>
+              <!-- textarea -->
+              <div class="textarea">
+                <p> There is always light If only we'ree brave enough to see it. if only we're brave enough to be it.
+                  💯🔥🔥 <b>(AMANDA GORMAN)</b> </p>
+              </div>
+              <!-- photo -->
+              <div class="image-post">
+                <img src="images/" alt="" width='100%'>
+              </div>
+              <!-- like-->
+              <hr>
+              <div class="like">
+                <div class="likes">
+                  <div class="like-p"><a href="javascript:void(0)"><i class="fa-solid fa-thumbs-up"></i>1 Likes</a>
+                  </div>
+                  <div class="like-p"><a href="javascript:void(0)"><i class="fa-solid fa-comment"></i>2 Comment</a>
+                  </div>
+                </div>
+                <div class="shares"><a href="javascript:void(0)"><i class="fa-solid fa-share"></i> Share</a></div>
+              </div>
+              <hr>
+
+              <!-- comment 1 -->
+              <div class="comment">
+                <div class="comment-img">
+                  <img src="images/girl-2.png.jpg" alt="" width="100%">
+                </div>
+                <div class="comment-comment">
+                  <p class="comment-p">eylül öztürk</p>
+                  <p class="comment-pp">❤️‍🔥🙌</p>
+                  <div class="comment-p-p">
+                    <p><a href="javascript:void(0)">Like</a></p>
+                    <p><a href="javascript:void(0)">Replay</a></p>
+                    <p><a href="javascript:void(0)">Translate</a></p>
+                    <p class="comment-p-t">Just Now</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- comment 1 -->
+              <div class="comment">
+                <div class="comment-img">
+                  <img src="images/girl.png" alt="" width="100%">
+                </div>
+                <div class="comment-comment">
+                  <p class="comment-p">ecrin su çoban</p>
+                  <p class="comment-pp">right👍</p>
+                  <div class="comment-p-p">
+                    <p><a href="javascript:void(0)">Like</a></p>
+                    <p><a href="javascript:void(0)">Replay</a></p>
+                    <p><a href="javascript:void(0)">Translate</a></p>
+                    <p class="comment-p-t">1 week ago</p>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="user-comment">
+                <div class="user-input"><input type="text">
+                </div>
+                <div class="user-comment-btn">
+                  <button><i class="fa-solid fa-paper-plane"></i></button>
+                  <button><i class="fa-solid fa-paperclip"></i></button>
+                  <button><i class="fa-solid fa-face-smile"></i></button>
+                  <button><i class="fa-solid fa-camera"></i></button>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+
+        <!-- post story -->
+        <div class="storys">
+
+          <!-- story section -->
+          <div class="stories">
+
+            <div>
+              <h3>Stories</h3>
+            </div>
+
+            <!-- story 1 -->
+            <div class="story-people">
+              <div class="story-imgs"><img src="images/create-story.png " alt="" width="100%"></div>
+              <div>
+                <p class="story-p">create your story</p>
+                <p class="story-p-n">Story Time</p>
+              </div>
+            </div>
+            <!-- story 2 -->
+            <div class="story-people">
+              <div class="story-imgs"><img src="images/nobita.jpg" alt="" width="90%"></div>
+              <div class="story-text-p">
+                <p class="story-p">eylül öztürk</p>
+                <p class="story-p-n">A few second</p>
+              </div>
+            </div>
+
+            <!-- story 3 -->
+            <div class="story-people">
+              <div class="story-imgs"><img src="images/car.jpg" alt="" width="90%"></div>
+              <div class="story-text-p">
+                <p class="story-p">Zeynep</p>
+                <p class="story-p-n">2min ago</p>
+              </div>
+            </div>
+
+            <!-- story 4 -->
+            <div class="story-people">
+              <div class="story-imgs"><img src="images/maldives.jpg" alt="" width="90%"></div>
+              <div class="story-text-p">
+                <p class="story-p">Mehmet</p>
+                <p class="story-p-n">24h ago</p>
+              </div>
+            </div>
+            <div class="btn-story-va">
+              <button>View All</button>
+            </div>
+
+          </div>
+
+
+          <!-- events section -->
+          <div class="eventss">
+            <div class="event-h">
+              <h3>Event</h3>
+              <i class="fa-solid fa-ellipsis"></i>
+            </div>
+            <hr>
+
+            <!-- event 1 -->
+            <div class="event-place">
+              <img src="images/beach.jpg" alt="" width="100%">
+              <p class="event-card-p">THIS SUNDAY AT 10 AM</p>
+              <p class="event-card-p-1">BEACH PLEASE - The grand Beach Party</p>
+              <p class="event-card-p-2">Turtle beach karachi</p>
+              <p class="event-card-p-3">2.2k insterested 162 going</p>
+
+              <div class="event-card-btn">
+                <button class="event-card-btn-1"><i class="fa-solid fa-star"></i> Insterested</button>
+                <button class="event-card-btn-2"><i class="fa-solid fa-share"></i></button>
+              </div>
+            </div>
+
+            <!-- event 2 -->
+            <div class="event-place">
+              <img src="images/cooking.jpg" alt="" width="100%">
+              <p class="event-card-p">SAT, JUNAT 3:30 AM</p>
+              <p class="event-card-p-1">Pakistan Cooking Class</p>
+              <p class="event-card-p-2">avari Towers</p>
+              <p class="event-card-p-3">159 insterested 8 going</p>
+
+              <div class="event-card-btn">
+                <button class="event-card-btn-1"><i class="fa-solid fa-star"></i> Insterested</button>
+                <button class="event-card-btn-2"><i class="fa-solid fa-share"></i></button>
+              </div>
+            </div>
+
+            <!-- event 3 -->
+            <div class="event-place">
+              <img src="images/study-in-asutrila.jpg" alt="" width="100%">
+              <p class="event-card-p">THIS THURSDAY AT 12 AM</p>
+              <p class="event-card-p-1">Study In Australia - In House seassion At FES Office Karachi</p>
+              <p class="event-card-p-2">FES KARACHI</p>
+              <p class="event-card-p-3">230 insterested 18 going</p>
+
+              <div class="event-card-btn">
+                <button class="event-card-btn-1"><i class="fa-solid fa-star"></i> Insterested</button>
+                <button class="event-card-btn-2"><i class="fa-solid fa-share"></i></button>
+              </div>
+            </div>
+
+            <!-- event 4 -->
+            <div class="event-place">
+              <img src="images/hunza.jpg" alt="" width="100%">
+              <p class="event-card-p">THIS FRIDAY AT 2 PM</p>
+              <p class="event-card-p-1">05 Days Trip To Hunza | Karimabad | Khunjeraab Pass!</p>
+              <p class="event-card-p-2">Beyond Adventure</p>
+              <p class="event-card-p-3">2k insterested 162 going</p>
+
+              <div class="event-card-btn">
+                <button class="event-card-btn-1"><i class="fa-solid fa-star"></i> Insterested</button>
+                <button class="event-card-btn-2"><i class="fa-solid fa-share"></i></button>
+              </div>
+            </div>
+
+          </div>
+
+
+          <!-- events section -->
+          <div class="birth">
+
+            <div class="birth-h">
+              <h5>Upcoming Birthday</h5>
+              <i class="fa-solid fa-ellipsis"></i>
+            </div>
+
+            <hr>
+
+            <!-- birth 1-->
+            <div class="story-people">
+              <div class="story-imgs"><img src="images/albale.jpg" alt="" width="100%"></div>
+              <div>
+                <p class="story-p">Albela</p>
+                <p class="story-p-n">Today</p>
+              </div>
+            </div>
+
+            <!-- birth 2 -->
+            <div class="story-people">
+              <div class="story-imgs"><img src="images/zehra.jpeg" alt="" width="100%"></div>
+              <div>
+                <p class="story-p">Zehar</p>
+                <p class="story-p-n">Tomorrow</p>
+              </div>
+            </div>
+
+            <hr>
+
+            <!-- birth 3 -->
+            <div class="story-people">
+              <div class="story-imgs"><img src="images/hiranur.jpeg " alt="" width="100%"></div>
+              <div>
+                <p class="story-p">Hiranur</p>
+                <p class="story-p-n">10 Day Left</p>
+              </div>
+            </div>
+
+            <!-- birth 4 -->
+            <div class="story-people">
+              <div class="story-imgs"><img src="images/eyman.jpg " alt="" width="100%"></div>
+              <div>
+                <p class="story-p">Eymen</p>
+                <p class="story-p-n">July 12</p>
+              </div>
+            </div>
+
+            <!-- birth 5 -->
+            <div class="story-people">
+              <div class="story-imgs"><img src="images/stroy-sea.png.jpg" alt="" width="100%"></div>
+              <div>
+                <p class="story-p">Mehmet</p>
+                <p class="story-p-n">November 24</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+
+      </div>
+    </div>
+
+    <div class="peoples">
+      <div class="frineds-h">
+        <h4>Friends</h4>
+      </div>
+
+      <!-- people 1 -->
+      <div class="people-profile">
+        <div class="imgs"><img src="images/cartoon-girl.png" alt="" width="90%"><span></span>
+        </div>
+        <div class="people-n-texts">
+          <p class="name-p">Zeynep</p>
+          <p class="name-p-n">Just Now</p>
+        </div>
+      </div>
+
+      <!-- people 2 -->
+      <div class="people-profile">
+        <div class="imgs"><img src="images/cartoon.png" alt="" width="90%"><span></span>
+        </div>
+        <div class="people-n-texts">
+          <p class="name-p">miraç</p>
+          <p class="name-p-n">Just Now</p>
+        </div>
+      </div>
+
+      <!-- people 3 -->
+      <div class="people-profile">
+        <div class="imgs"><img src="images/boy-ast.png" alt="" width="90%"><span></span>
+        </div>
+        <div class="people-n-texts">
+          <p class="name-p">ömer asaf</p>
+          <p class="name-p-n">Just Now</p>
+        </div>
+      </div>
+
+
+      <!-- people 4 -->
+      <div class="people-profile">
+        <div class="imgs"><img src="images/girl-2.png.jpg" alt="" width="90%">
+        </div>
+        <div class="people-n-texts">
+          <p class="name-p">eylül öztürk</p>
+          <p class="name-p-n">5min ago</p>
+        </div>
+      </div>
+
+      <!-- people 5 -->
+      <div class="people-profile">
+        <div class="imgs"><img src="images/girl.png" alt="" width="90%">
+        </div>
+        <div class="people-n-texts">
+          <p class="name-p">ecrin su çoban</p>
+          <p class="name-p-n">1h ago</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+  <script src="javascript/bootstrap.js"></script>
+  <script src="javascript/app.js"></script>
+</body>
+
+</html>
